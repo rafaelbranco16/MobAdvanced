@@ -1,0 +1,114 @@
+{
+    "items":[
+        {
+            "name":"The Executioner",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+30"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+20%"
+                }
+            ],
+            "passive":"PASSIVE - Basic Attacks against an enemy reduce your target's Physical Protection by 7% for 3 seconds (max. 4 Stacks).",
+            "price":"2200"
+        },
+        {
+            "name":"Qin's Sais",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+30"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+25%"
+                }
+            ],
+            "passive":"PASSIVE - On Basic Attack hits, deal Physical Damage equal to 1.5% of the target's maximum Health. If the target has over 2250 Health, the bonus damage scales up. This effect reaches a maximum of 6% of the targets Maximum Health at 2750 Health.",
+            "price":"1350"
+        },
+        {
+            "name":"Deathbringer",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+30"
+                },
+                {
+                    "name":"Critical Strike Chance",
+                    "value":"+30%"
+                }
+            ],
+            "passive":"PASSIVE - Critical Strike bonus damage dealt is increased by 25%.",
+            "price":"2900"
+        },
+        {
+            "name":"Demon Blade",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+30"
+                },
+                {
+                    "name":"Critical Strike Chance",
+                    "value":"+20%"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+15%"
+                }
+            ],
+            "passive":"PASSIVE - Your Critical Hits provide you with 10% Physical Penetration for 4s.",
+            "price":"2400"
+        },
+        {
+            "name":"Dominance",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+40"
+                },
+                {
+                    "name":"Mana",
+                    "value":"+200"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+15%"
+                },
+                {
+                    "name":"MP5",
+                    "value":"+20"
+                }
+            ],
+            "passive":"PASSIVE - Your Basic Attacks benefit from an additional 20% Physical Penetration.",
+            "price":"2500"
+        },
+        {
+            "name":"Fail-not",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+30"
+                },
+                {
+                    "name":"Critical Strike Chance",
+                    "value":"+15%"
+                },
+                {
+                    "name":"Cooldown Reduction",
+                    "value":"+20%"
+                },
+                {
+                    "name":"Physical Penetration",
+                    "value":"+10%"
+                }
+            ],
+            "passive":"PASSIVE - When your Ultimate ability has finished casting, your next ability or basic attack within 8s that damages an enemy god marks them, increasing the chance you and your allies can land a Critical Strike by 20% for 10 seconds. This can only occur once every 45 seconds. This item is only available to Hunters.",
+            "price":"2650"
+        }
+    ]
+}
