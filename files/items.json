@@ -109,6 +109,25 @@
             ],
             "passive":"PASSIVE - When your Ultimate ability has finished casting, your next ability or basic attack within 8s that damages an enemy god marks them, increasing the chance you and your allies can land a Critical Strike by 20% for 10 seconds. This can only occur once every 45 seconds. This item is only available to Hunters.",
             "price":"2650"
+        },
+        {
+            "name":"Rod of Tahuti",
+            "stats":[
+                {
+                    "name":"Magical Power",
+                    "value":"+115"
+                },
+                {
+                    "name":"MP5",
+                    "value":"+30"
+                },
+                {
+                    "name":"Magical Penetration",
+                    "value":"+10%"
+                }
+            ],
+            "passive":"PASSIVE - Basic Attacks and Abilities gain 15% additional Magical Power against targets below 60% Health.",
+            "price":"2850"
         }
     ]
 }
