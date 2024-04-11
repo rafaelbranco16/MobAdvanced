@@ -13,7 +13,10 @@
                 }
             ],
             "passive":"PASSIVE - Basic Attacks against an enemy reduce your target's Physical Protection by 7% for 3 seconds (max. 4 Stacks).",
-            "price":"2200"
+            "price":"2200",
+            "starter":"false",
+            "god_type":"ranged",
+            "type":"Physical"
         },
         {
             "name":"Qin's Sais",
@@ -28,7 +31,10 @@
                 }
             ],
             "passive":"PASSIVE - On Basic Attack hits, deal Physical Damage equal to 1.5% of the target's maximum Health. If the target has over 2250 Health, the bonus damage scales up. This effect reaches a maximum of 6% of the targets Maximum Health at 2750 Health.",
-            "price":"1350"
+            "price":"1350",
+            "starter":"false",
+            "god_type":"ranged",
+            "type":"Physical"
         },
         {
             "name":"Deathbringer",
@@ -43,7 +49,10 @@
                 }
             ],
             "passive":"PASSIVE - Critical Strike bonus damage dealt is increased by 25%.",
-            "price":"2900"
+            "price":"2900",
+            "starter":"false",
+            "type":"Physical",
+            "god_type":"ranged"
         },
         {
             "name":"Demon Blade",
@@ -62,7 +71,10 @@
                 }
             ],
             "passive":"PASSIVE - Your Critical Hits provide you with 10% Physical Penetration for 4s.",
-            "price":"2400"
+            "price":"2400",
+            "starter":"false",
+            "type":"Physical",
+            "god_type":"ranged"
         },
         {
             "name":"Dominance",
@@ -85,7 +97,10 @@
                 }
             ],
             "passive":"PASSIVE - Your Basic Attacks benefit from an additional 20% Physical Penetration.",
-            "price":"2500"
+            "price":"2500",
+            "starter":"false",
+            "type":"Physical",
+            "god_type":"ranged"
         },
         {
             "name":"Fail-not",
@@ -108,7 +123,10 @@
                 }
             ],
             "passive":"PASSIVE - When your Ultimate ability has finished casting, your next ability or basic attack within 8s that damages an enemy god marks them, increasing the chance you and your allies can land a Critical Strike by 20% for 10 seconds. This can only occur once every 45 seconds. This item is only available to Hunters.",
-            "price":"2650"
+            "price":"2650",
+            "starter":"false",
+            "type":"Physical",
+            "god_type":"ranged"
         },
         {
             "name":"Rod of Tahuti",
@@ -127,7 +145,128 @@
                 }
             ],
             "passive":"PASSIVE - Basic Attacks and Abilities gain 15% additional Magical Power against targets below 60% Health.",
-            "price":"2850"
+            "price":"2850",
+            "type":"magical",
+            "starter":"false",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Death's Embrace",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+45"
+                },
+                {
+                    "name":"Magical Power",
+                    "value":"+80"
+                },
+                {
+                    "name":"Health",
+                    "value":"+150"
+                }
+            ],
+            "passive":"PASSIVE - Hitting an enemy with a Basic Attack restores 1.4% of your Health, 2% of your Mana and reduces your active non-Ultimate Cooldowns by 0.33s. Basic Attacks that deal damage in an AoE restore less health (75% for Melee Attacks, 50% for Ranged Attacks) for each enemy hit after the first and only count once for the Cooldown reduction effect.",
+            "price":"2150",
+            "type":"magical or physical",
+            "starter":"true",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Death's Temper",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+35"
+                },
+                {
+                    "name":"Magical Power",
+                    "value":"+50"
+                },
+                {
+                    "name":"Health",
+                    "value":"+150"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+30%"
+                }
+            ],
+            "passive":"PASSIVE - When an enemy dies within 80 units of you gain 1 stack of Temper that provides 7% increased Basic Attack Damage for 10s. This can stack up to 5 times. If an enemy god dies near you immediately gain 5 stacks.",
+            "price":"2150",
+            "type":"magical or physical",
+            "starter":"true",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Diamond Arrow",
+            "stats":[
+                {
+                    "name":"Basic Attack Damage",
+                    "value":"+70"
+                },
+                {
+                    "name":"Penetration",
+                    "value":"+10"
+                },
+                {
+                    "name":"Health",
+                    "value":"+100"
+                }
+            ],
+            "passive":"PASSIVE - When you kill an enemy you gain 7 gold and 25% Attack Speed for 8s. This can stack up to 3 times. If you kill an enemy god you gain 3 stacks and 21 gold immediately.",
+            "price":"2150",
+            "type":"Physical",
+            "starter":"true",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Ornate Arrow",
+            "stats":[
+                {
+                    "name":"Basic Attack Damage",
+                    "value":"+60"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+10%"
+                },
+                {
+                    "name":"Health",
+                    "value":"+100"
+                },
+                {
+                    "name":"Physical Critical Strike Chance",
+                    "value":"+15%"
+                }
+            ],
+            "passive":"PASSIVE - All sources of gold gain are increased by 5%. For every 100 gold you have gain 1.25% Attack Speed and 1% Physical Critical Strike Chance, up to a maximum of 20 stacks.",
+            "price":"2150",
+            "type":"Physical",
+            "starter":"true",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Atalanta's Bow",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+35"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"+25%"
+                },
+                {
+                    "name":"Physical Penetration",
+                    "value":"+10"
+                }
+            ],
+            "passive":"PASSIVE - Upon getting a kill or assist on an Enemy god you gain Atalanta's Agility for 10s. This effect increases your Attack Speed by 20% and decreases the Movement Penalty for attacking, backpedaling, and strafing by 30%.",
+            "price":"2300",
+            "type":"Physical",
+            "starter":"false",
+            "god_type":"ranged"
         }
     ]
 }
