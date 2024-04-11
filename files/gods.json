@@ -1,0 +1,24 @@
+{
+    "gods": [
+        {
+            "name":"Anubis",
+            "class":"Mage",
+            "strengths":[
+                "Depends heavily on lifesteal",
+                "High damage made by ticks"
+            ],
+            "damage_type":"Magical",
+            "type":"Ranged"
+        },
+        {
+            "name":"Anhur",
+            "class":"Carry",
+            "strengths":[
+                "High damage per second",
+                "Rellies on basic atack damage"
+            ],
+            "damage_type":"Physical",
+            "type":"Ranged"
+        }
+    ]
+}
