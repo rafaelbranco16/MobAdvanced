@@ -267,6 +267,64 @@
             "type":"Physical",
             "starter":"false",
             "god_type":"ranged"
+        },
+        {
+            "name":"Asi",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+35"
+                },
+                {
+                    "name":"Physical Lifesteal",
+                    "value":"+18%"
+                },
+                {
+                    "name":"Attack Speed",
+                    "value":"++20%"
+                }
+            ],
+            "passive":"PASSIVE - While below 60% Health, you gain an additional 22.5% Physical Lifesteal for 5 seconds. Can only occur once every 15 seconds.",
+            "price":"2400",
+            "type":"Physical",
+            "starter":"false",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Devourer's Gauntlet",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+30"
+                },
+                {
+                    "name":"Physical Lifesteal",
+                    "value":"+15%"
+                }
+            ],
+            "passive":"PASSIVE - You permanently gain 0.4 Physical Power, 0.2 Physical Penetration, and 0.15% Physical Lifesteal per Stack, and receive 1 Stack per 600 Damage Dealt to minions or 300 Damage Dealt to gods. At 50 stacks this item Evolves, gaining 5 Physical Penetration.",
+            "price":"2400",
+            "type":"Physical",
+            "starter":"false",
+            "god_type":"ranged"
+        },
+        {
+            "name":"Titan's Bane",
+            "stats":[
+                {
+                    "name":"Physical Power",
+                    "value":"+40"
+                },
+                {
+                    "name":"Physical Penetration",
+                    "value":"+20%"
+                }
+            ],
+            "passive":"PASSIVE - Your first ability cast gains 20% Physical Penetration. This can only occur once every 5 seconds.",
+            "price":"2500",
+            "type":"Physical",
+            "starter":"false",
+            "god_type":"ranged or meelee"
         }
     ]
 }
