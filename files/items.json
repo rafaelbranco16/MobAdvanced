@@ -325,6 +325,28 @@
             "type":"Physical",
             "starter":"false",
             "god_type":"ranged or meelee"
+        },
+        {
+            "name":"Gem of Focus",
+            "stats":[
+                {
+                    "name":"Magical Power",
+                    "value":"+70"
+                },
+                {
+                    "name":"Health",
+                    "value":"+100"
+                },
+                {
+                    "name":"MP5",
+                    "value":"+15"
+                }
+            ],
+            "passive":"PASSIVE - Every time you cast an ability that costs mana you gain a stack of Focus for 10s, providing 5% Movement Speed and 5% Damage Increase, stacking up to 3 times.",
+            "price":"2200",
+            "type":"Magical",
+            "starter":"true",
+            "god_type":"ranged or meelee"
         }
     ]
 }
