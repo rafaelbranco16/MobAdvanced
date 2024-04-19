@@ -1,6 +1,6 @@
 from src.services import InformationLoaders
 from src.services.ModelLoader import create_model
-from src.services.PromptSender import build_asker, god_build_asker, general_asker
+from src.services.PromptSender import build_asker, god_build_asker
 
 def question_console_reader():
     choice = 100
@@ -18,7 +18,7 @@ def question_console_reader():
 
 def decider(choice):
     if choice == "1":
-        question = input("What do you want to know on the items?\n\n")
+        question = input("What is the item you want to know about?\n\n")
         model = create_model()
         file_content = InformationLoaders.load_json_document('./files/items.json')
         build_asker(file_content, question, model)
@@ -29,12 +29,3 @@ def decider(choice):
         items_content = InformationLoaders.load_json_document('./files/items.json')
         gods_content = InformationLoaders.load_json_document('./files/gods.json')
         god_build_asker(question, items_content, gods_content, model)
-    
-    if choice == "3":
-        question = input("What you want to ask?\n\n")
-        model = create_model()
-        items_content = InformationLoaders.load_json_document('./files/items.json')
-        gods_content = InformationLoaders.load_json_document('./files/gods.json')
-        general_asker(question, items_content, gods_content, model)
-    
-
