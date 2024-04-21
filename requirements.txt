@@ -2,3 +2,9 @@ langchain-core
 langchain-openai
 langchain-anthropic
 jq
+langchain
+torch
+transformers
+sentence-transformers
+faiss-cpu
+gradio

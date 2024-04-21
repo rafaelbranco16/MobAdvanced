@@ -8,8 +8,11 @@ from langchain_core.prompts.chat import (
     SystemMessagePromptTemplate,
 )
 from langchain_openai import ChatOpenAI
+import src.services.InformationLoaders as Loaders
 
-def build_asker(all_items, content, model):
+
+def build_asker(content, model):
+    all_items = Loaders.load_json_document('./files/items.json')
     system_message_template = """
 <</SYS>>[/INST]\\n
 You are a helpful assistant that will give information about SMITE items in a JSON object.
@@ -29,8 +32,7 @@ Just return a JSON with the item information without explanations
         | model
         | output_parser
     )
-    for chunk in chain.stream({"all_items":all_items,"content":content}):
-        print(chunk, end="", flush=True)
+    return chain.invoke({"all_items":all_items,"content":content})
 
 def god_build_asker(content, all_items, all_gods, model):
     system_message_template = """

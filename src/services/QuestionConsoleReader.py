@@ -20,8 +20,7 @@ def decider(choice):
     if choice == "1":
         question = input("What is the item you want to know about?\n\n")
         model = create_model()
-        file_content = InformationLoaders.load_json_document('./files/items.json')
-        build_asker(file_content, question, model)
+        build_asker(question, model)
 
     if choice == "2":
         question = input("You want a build for which god?\n\n")
