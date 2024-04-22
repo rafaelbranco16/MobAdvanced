@@ -6,5 +6,4 @@ langchain
 torch
 transformers
 sentence-transformers
-faiss-cpu
 gradio

@@ -7,3 +7,7 @@ MobAdvanced brings a new light to less experienced players of different MOBA-typ
 ⚡️ Quickstart
 
 💫 The future
+
+In the humble opinion of the creator, a bright future cannot be taken as granted. This is a system that with a lot of variables that are not affordable, yet. But what the future waits is not the only thing that can be earned or achieved with this project. This project waits for more fun than usage! 
+
+The future is fun, but ambiguous. Take this as a game and have the fun you want with it. Your game will be as allucinated as you can make it. Your game will be as good as you can make it!
