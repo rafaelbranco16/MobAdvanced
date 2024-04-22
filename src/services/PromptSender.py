@@ -1,17 +1,16 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
-from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.prompts.chat import (
     ChatPromptTemplate,
     HumanMessagePromptTemplate,
     SystemMessagePromptTemplate,
 )
-from langchain_openai import ChatOpenAI
 import src.services.InformationLoaders as Loaders
+from src.services.RAG import RAG
 
 
-def build_asker(content, model):
+
+def item_asker(content, model):
     all_items = Loaders.load_json_document('./files/items.json')
     system_message_template = """
 <</SYS>>[/INST]\\n
@@ -34,14 +33,16 @@ Just return a JSON with the item information without explanations
     )
     return chain.invoke({"all_items":all_items,"content":content})
 
-def god_build_asker(content, all_items, all_gods, model):
+def god_build_asker(content, rag:RAG, model):
+    all_items = Loaders.load_json_document('./files/items.json')
+    god = rag.similarity_search(content)
     system_message_template = """
 <</SYS>>[/INST]\\n
 You are a helpful assistant that will give builds to a SMITE god.
 
 You are only able to give information about the items from the following JSON object:
 All the items {all_items}
-All the gods {all_gods}
+All the gods {god}
 
 This is the list of critirea
 * The build has to have 6 items.
@@ -62,12 +63,35 @@ Just return a JSON with the item information without explanations
     system_message = SystemMessagePromptTemplate.from_template(system_message_template)
     human_message=HumanMessagePromptTemplate.from_template(human_message_template)
     chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])
-    #print(chat_prompt)
     output_parser = StrOutputParser()
     chain = (
         chat_prompt
         | model
         | output_parser
     )
-    for chunk in chain.stream({"all_items":all_items, "all_gods":all_gods, "content":content}):
-        print(chunk, end="", flush=True)
+    return chain.invoke({"all_items":all_items, "god":god, "content":content})
+
+def god_informator(question, model, rag):
+    content = rag.similarity_search(question)
+
+    system_message_template = """
+You are an helpful assistant about SMITE.
+
+You are only able to give information following this:
+{content}
+        """
+    human_message_template = "{god}"
+
+    system_message = SystemMessagePromptTemplate.from_template(system_message_template)
+    human_message=HumanMessagePromptTemplate.from_template(human_message_template)
+    chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])
+
+    output_parser = StrOutputParser()
+    chain = (
+        chat_prompt
+        | model
+        | output_parser
+    )
+    return chain.invoke({"content":content, "god":question})
+
+

@@ -1,6 +1,6 @@
 from src.services import InformationLoaders
 from src.services.ModelLoader import create_model
-from src.services.PromptSender import build_asker, god_build_asker
+from src.services.PromptSender import item_asker, god_build_asker
 
 def question_console_reader():
     choice = 100
@@ -20,7 +20,7 @@ def decider(choice):
     if choice == "1":
         question = input("What is the item you want to know about?\n\n")
         model = create_model()
-        build_asker(question, model)
+        item_asker(question, model)
 
     if choice == "2":
         question = input("You want a build for which god?\n\n")
