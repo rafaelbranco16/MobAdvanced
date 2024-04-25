@@ -19,6 +19,16 @@
             ],
             "damage_type":"Physical",
             "type":"Ranged"
+        },
+        {
+            "name":"Camazotz",
+            "class":"Assassin",
+            "strengths":[
+                "Rely on lifesteal",
+                "High Burst Ability Damage"
+            ],
+            "damage_type":"Physical",
+            "type":"meelee"
         }
     ]
 }

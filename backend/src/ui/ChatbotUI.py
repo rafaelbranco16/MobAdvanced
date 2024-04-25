@@ -24,9 +24,12 @@ def ask_bot(question, radio):
 
 def decider(question, radio):
     model = ModelLoader.create_model()
+    print(radio)
     if radio == "God":
         return Sender.god_informator(question=question, model=model, rag=rag)
     if radio == "Item":
         return Sender.item_asker(question, model)
     if radio == "Build":
         return Sender.god_build_asker(question, rag, model)
+    if radio == None:
+        return Sender.general_asker(question, model, rag)

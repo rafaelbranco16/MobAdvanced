@@ -1,0 +1,42 @@
+How does SMITE work?
+
+Smite is a 5 vs 5 team MOBA. Each team is composed by 5 players where every one belongs to a different role.
+The roles are:
+
+* Support
+* Mid
+* Solo
+* Carry (ADC)
+* Jungle
+
+For each role there is a class. 
+
+* Support -> Guardian
+* Mid -> Mage
+* Solo -> Warrior
+* Carry -> Hunter
+* Jungle -> Assassin
+
+Guardians: 
+The Guardians are most of the time played on the Support role. They are focused on defense and mostly use items with
+auras or passives that affect the team positvely or the enemy team negatively. Their damage type is Magical.
+
+Mages:
+The Mages are usually used because of their high burst damage with Magical damage abilities. The their type of 
+damage is magical and mostly used on the Mid lane. There are some exceptions, but they benefit on high power and 
+penetration items.
+
+Warrior:
+The Warriors fill the Solo lane. They mostly benefit from hybrid builds with some defensive items and some 
+damage items. Most of their builds include items that have aggressive passives/auras that do damage or CC.
+Their damage type is physical
+
+Carry:
+The Carry fill the Duo lane and they are Hunters, most of the time. They benefit from high attack speed 
+and they are ranged. Because of that, their builds are usually focused on one lifesteal item, attack speed,
+critical rate (sometimes) and penetration items with attack speed. They damage type is physical.
+
+Jungle:
+The jungles have a high burst damage and they do meelee physical damage. They are usually assassins. 
+They benefit on using high attack damageand penetration items. 
+There are some exceptions that use attack speed items.
