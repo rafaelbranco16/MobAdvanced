@@ -1,11 +1,3 @@
-langchain-core
-langchain-openai
-langchain-anthropic
-langchain_chroma
-langchain_text_splitters
-jq
-langchain
-torch
-transformers
-sentence-transformers
-gradio
+fastapi
+uvicorn
+injector

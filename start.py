@@ -1,9 +1,10 @@
-from src.ui.ChatbotUI import chatbot
-from src.services.QuestionConsoleReader import question_console_reader
+from fastapi import FastAPI
+from backend.src.router import router
+from injector import Injector
 
-def main():
-    chatbot()
-    #question_console_reader()
+app = FastAPI()
+app.include_router(router.router)
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+async def start():
+    return {"message": "default"}
