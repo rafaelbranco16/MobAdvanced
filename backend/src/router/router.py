@@ -9,3 +9,8 @@ class Router:
     async def get_random_build():
         ai_controller:AIController = loader.resolve("AIController")
         return ai_controller.get_random_build()
+    
+    @router.get("/insert/document")
+    async def insert_document():
+        ai_controller:AIController = loader.resolve("AIController")
+        return ai_controller.insert_document_content()

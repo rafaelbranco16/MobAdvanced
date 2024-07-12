@@ -1,3 +1,9 @@
 fastapi
 uvicorn
 injector
+langchain_core
+langchain
+langchain_chroma
+langchain_community
+langchain_huggingface
+sentence_transformers
