@@ -1,4 +1,4 @@
-from backend.src.rag.RAG import RAG
+from src.rag.RAG import RAG
 
 class AIService:
     '''

@@ -1,5 +1,5 @@
-from backend.src.loaders import loader
-from backend.src.services.AIService import AIService
+from src.loaders import loader
+from src.services.AIService import AIService
 
 
 class AIController:

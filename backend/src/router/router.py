@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from backend.src.loaders.loader import loader
-from backend.src.controller.AIController import AIController
+from src.loaders.loader import loader
+from src.controller.AIController import AIController
 
 router = APIRouter()
 

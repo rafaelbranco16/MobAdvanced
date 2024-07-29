@@ -1,4 +1,5 @@
 fastapi
+fastapi-cors
 uvicorn
 injector
 langchain_core
@@ -6,4 +7,5 @@ langchain
 langchain_chroma
 langchain_community
 langchain_huggingface
+langchain_openai
 sentence_transformers
