@@ -1,0 +1,31 @@
+
+@startuml Insert Valid Document
+
+actor Admin
+participant FE
+participant Router
+participant DocumentLoaderController
+participant DocumentLoaderService
+
+activate Admin
+Admin -> FE : sends document
+    activate FE
+    FE -> Router : POST /api/document
+        activate Router
+        Router -> DocumentLoaderController : send document
+            activate DocumentLoaderController
+            DocumentLoaderController -> DocumentLoaderService : sends document
+                activate DocumentLoaderService
+                DocumentLoaderService -> DocumentLoaderService : save document locally
+                    activate DocumentLoaderService
+                    deactivate DocumentLoaderService
+                DocumentLoaderService --> DocumentLoaderController : returns the success/insuccess
+                deactivate DocumentLoaderService
+            DocumentLoaderController --> Router : returns the success/insuccess 
+            deactivate DocumentLoaderController
+            Router --> FE : sends response
+        deactivate Router
+        FE --> Admin : shows operation success/insuccess
+    deactivate FE
+deactivate Admin
+@enduml
