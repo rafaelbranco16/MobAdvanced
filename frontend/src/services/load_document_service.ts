@@ -11,9 +11,9 @@ export default class LoadDocumentService {
 
             const result = await response.json();
             return result.info;
-        } catch (error) {
+        } catch (error:any) {
             console.error('Error:', error);
-            return 'Failed to upload file';
+            return error.message;
         }
     }
 }

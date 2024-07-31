@@ -1,0 +1,10 @@
+.navbar {
+    background-color: rgb(97, 97, 97);
+    position: sticky;
+}
+
+.navbar ul {
+    text-decoration: none;
+    list-style-type: none;
+    display:flex;
+}

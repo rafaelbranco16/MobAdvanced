@@ -1,0 +1,15 @@
+.navbar-li {
+    text-decoration: none;
+}
+
+.navbar-li:hover {
+    background-color: rgb(122, 122, 122);
+    transition: 0.2s;
+}
+
+.navbar-li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+}

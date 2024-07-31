@@ -6,14 +6,18 @@ from src.config import config
 app = FastAPI()
 app.include_router(router.router)
 app.include_router(documents_router.document_router)
+
+origins = [
+    "http://localhost:5173",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[config["react_app_url"]],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 @app.get("/")
 async def start():
