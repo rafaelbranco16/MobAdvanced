@@ -11,3 +11,8 @@ class DocumentLoaderController:
     '''
     async def insert_verified_document(self, file: UploadFile = File(...)):
         return await self.document_loader_service.save_valid_file(file)
+    '''
+    Sends to the service to return all files into the AI folder
+    '''
+    async def get_all_documents(self):
+        return await self.document_loader_service.get_all_documents()

@@ -12,5 +12,5 @@ class AIController:
     def get_random_build(self):
         return self.ai_service.get_random_build()
     
-    def insert_document_content(self):
-        return self.ai_service.insert_document_content()
+    def insert_document_content(self, file_name):
+        return self.ai_service.insert_document_content(file_name)

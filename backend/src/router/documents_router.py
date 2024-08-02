@@ -13,6 +13,13 @@ class DocumentRouter:
     '''
     @document_router.post("/insert/document")
     async def insert_valid_document(file: UploadFile = File(...)):
-        print(file)
         document_loader_controller:DocumentLoaderController = loader.resolve("DocumentLoaderController")
         return await document_loader_controller.insert_verified_document(file)
+    
+    '''
+    Starts the action to get all the documents into the AI folder
+    '''
+    @document_router.get("/all/documents")
+    async def get_all_documents():
+        document_loader_controller:DocumentLoaderController = loader.resolve("DocumentLoaderController")
+        return await document_loader_controller.get_all_documents()

@@ -1,4 +1,5 @@
 from src.rag.RAG import RAG
+from langchain_community.document_loaders import DirectoryLoader
 
 class AIService:
     '''
@@ -10,6 +11,10 @@ class AIService:
     def get_random_build(self):
         return {"message":"This is a random build"}
     
-    def insert_document_content(self):
-        if(self.rag is not any):
-            return {"message": "The RAG was successfully created."}
+    '''
+    Insert a file into the AI RAG
+    '''
+    def insert_document_content(self, file_name):
+        loader:DirectoryLoader = DirectoryLoader("files/AI_feed_documents/" + file_name)
+        docs = loader.load()
+        print(docs)

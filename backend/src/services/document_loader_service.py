@@ -14,3 +14,10 @@ class DocumentLoaderService:
         with open(file_location, "wb") as buffer:
                 shutil.copyfileobj(file.file, buffer)
         return {"info": f"file '{file.filename}' saved at '{file_location}'"}
+
+    '''
+    Return all files into the filesystem
+    '''
+    async def get_all_documents(self):
+         file_dir = config["ai_feed_files_location"]
+         return os.listdir(file_dir)
