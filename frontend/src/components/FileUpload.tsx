@@ -1,7 +1,7 @@
 // src/components/FileUpload.tsx
 
 import React, { useState, ChangeEvent } from 'react';
-import LoadDocumentService from '../services/load_document_service';
+import DocumentService from '../services/load_document_service';
 
 const FileUpload: React.FC = () => {
     const [file, setFile] = useState<File | null>(null);
@@ -22,7 +22,7 @@ const FileUpload: React.FC = () => {
         const formData = new FormData();
         formData.append('file', file);
 
-        const service:LoadDocumentService = new LoadDocumentService()    
+        const service:DocumentService = new DocumentService()    
         setMessage(await service.load_document(formData))    
     };
 

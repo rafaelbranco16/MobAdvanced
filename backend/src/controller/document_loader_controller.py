@@ -15,4 +15,5 @@ class DocumentLoaderController:
     Sends to the service to return all files into the AI folder
     '''
     async def get_all_documents(self):
-        return await self.document_loader_service.get_all_documents()
+        docs = await self.document_loader_service.get_all_documents()
+        return {"documents": docs}
