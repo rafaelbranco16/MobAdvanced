@@ -1,0 +1,23 @@
+.navbar-searchbar {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center align items vertically */
+    margin-left: auto;
+    padding: 15px;
+}
+
+.navbar-searchbar input {
+    border-radius: 12px;
+    border: none;
+    color: grey;
+    padding: 3px 10px;
+    flex-grow: 1; /* Allow the input to grow */
+}
+
+.navbar-searchbar button {
+    background-color: #091728;
+    color: #FDCF40;
+    border: 1px solid #FDCF40;
+    border-radius: 2px;
+    padding: 4px;
+    margin-left: 10px;
+}

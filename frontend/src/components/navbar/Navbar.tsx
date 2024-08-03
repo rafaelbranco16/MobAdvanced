@@ -1,4 +1,5 @@
 import NavbarItem from "./navbar-item/NavbarItem";
+import SearchBar from './navbar-searchbar/SearchBar'
 import './Navbar.css'
 
 function HeaderNavbar() {
@@ -9,6 +10,7 @@ function HeaderNavbar() {
                     <NavbarItem content="Home" href=""/>
                     <NavbarItem content="Add Info" href="add-info"/>
                     <NavbarItem content="Files" href="files"/>
+                    <SearchBar content="Something specific?"/>
                 </ul>
             </div>
         </>
