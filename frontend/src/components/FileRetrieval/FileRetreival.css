@@ -1,0 +1,73 @@
+/* Ensure the whole page background is the same color */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #091728;
+    height: 100%;
+}
+
+.file-retrieval {
+    height: 100%;
+    background-color: #091728;
+    padding: 10px;
+}
+
+/* Remove the list styling and border between items */
+.file-retrieval ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-retrieval-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Adjust the style of the file name and actions */
+.file-retrieval-file {
+    color: white;
+    flex: 1;
+}
+.file-retrieval-actions {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+.file-retrieval-actions button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-retrieval-actions-download {
+    background-color: #091728;
+    color: #FDCF40;
+    border: 2px solid #FDCF40;
+}
+.file-retrieval-actions-download:hover {
+    background-color: #FDCF40;
+    color: #091728;
+    transition: 0.2s;
+}
+
+.file-retrieval-actions-accept {
+    background-color: greenyellow;
+    border: 2px solid greenyellow;
+}
+.file-retrieval-actions-accept:hover {
+    background-color: rgb(117, 195, 1);
+    border: 2px solid rgb(117, 195, 1);
+    transition: 0.2s;
+}
+
+.file-retrieval-actions-remove {
+    background-color: red;
+    border: 2px solid red;
+}
+.file-retrieval-actions-remove:hover {
+    background-color: rgb(197, 0, 0);
+    border: 2px solid rgb(197, 0, 0);
+    transition: 0.2s;
+}

@@ -23,3 +23,13 @@ class DocumentRouter:
     async def get_all_documents():
         document_loader_controller:DocumentLoaderController = loader.resolve("DocumentLoaderController")
         return await document_loader_controller.get_all_documents()
+    
+    @document_router.get("/download/{file_name}")
+    async def download_file(file_name:str):
+        document_loader_controller:DocumentLoaderController = loader.resolve("DocumentLoaderController")
+        return await document_loader_controller.download_file(file_name)
+    
+    @document_router.get("/remove/{file_name}")
+    async def remove_file(file_name:str):
+        document_loader_controller:DocumentLoaderController = loader.resolve("DocumentLoaderController")
+        return await document_loader_controller.remove_file(file_name)

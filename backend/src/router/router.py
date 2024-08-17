@@ -14,3 +14,4 @@ class Router:
     async def insert_document():
         ai_controller:AIController = loader.resolve("AIController")
         return ai_controller.insert_document_content()
+    

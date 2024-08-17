@@ -28,30 +28,16 @@ export default class DocumentService {
             return error.message;
         }
     }
-    public async downloadDocument(fileName:string) {
-        const url = url_config.backend_base_url + endpoints.download_document + fileName
 
+    public async downloadDocument(fileName:string) {
         try {
-            const response = await fetch(url, {
+            const response = await fetch(url_config.backend_base_url + endpoints.download_document + fileName, {
                 method: 'GET',
             });
-            return response;
+            return await response.json();
         } catch (error:any) {
             console.error('Error:', error);
             return error.message;
         }
-    }
-    public async removeDocument(fileName:string) {
-        const url = url_config.backend_base_url + endpoints.remove_document + fileName
-
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-            });
-            return response.json();
-        } catch (error:any) {
-            console.error('Error:', error);
-            return error.message;
-        }    
     }
 }
