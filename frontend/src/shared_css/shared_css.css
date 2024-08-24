@@ -1,0 +1,14 @@
+.ai-question-div, .class-explanation-div {
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.ai-question-div input[type='text'] {
+    margin-top: 5%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}

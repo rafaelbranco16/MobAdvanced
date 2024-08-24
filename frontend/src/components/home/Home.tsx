@@ -12,6 +12,7 @@ function Home() {
                 color='#BE3C21'
                 text='Warriors'
                 text_color='#BE3C21'
+                link='/warrior'
             />
             <ImageContainer 
                 god="/Pele.png" 
@@ -21,6 +22,7 @@ function Home() {
                 color='#EFB203'
                 text='Assassins'
                 text_color='#EFB203'
+                link='assassin'
             />
             <ImageContainer 
                 god="/Anhur.png" 
@@ -30,6 +32,7 @@ function Home() {
                 color='#E75900'
                 text='Hunters'
                 text_color='#E75900'
+                link='/carry'
             />
             <ImageContainer 
                 god="/Scylla.jpg" 
@@ -39,6 +42,7 @@ function Home() {
                 color='#942591'
                 text='Mages'
                 text_color='#942591'
+                link='mage'
             />
             <ImageContainer 
                 god="/Kuzenbo.jpg" 
@@ -47,7 +51,8 @@ function Home() {
                 class_alt="Guardian" 
                 color='#648921'
                 text='Guardians'
-                text_color='#648921'                
+                text_color='#648921'   
+                link='guardian'             
             />
         </div>
     );

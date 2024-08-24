@@ -1,0 +1,16 @@
+.mages-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.mages-page .banner-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 20%;
+    margin-bottom: 20px;
+    box-shadow: 20px black;
+}

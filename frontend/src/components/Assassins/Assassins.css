@@ -1,0 +1,16 @@
+.assassins-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.assassins-page .banner-image {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Adjust as needed for your banner height */
+    object-fit: cover; /* Ensures the image covers the banner area */
+    object-position: 0 2%; /* Default positioning, you can adjust this */
+    margin-bottom: 20px; /* Space between the banner and the content below */
+    box-shadow: 20px black;
+}
