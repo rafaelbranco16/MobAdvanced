@@ -1,5 +1,5 @@
 from src.loaders import loader
-from src.services.AIService import AIService
+from src.services.ai_service import AIService
 
 
 class AIController:
@@ -14,3 +14,6 @@ class AIController:
     
     def insert_document_content(self, file_name):
         return self.ai_service.insert_document_content(file_name)
+    
+    async def class_question(self, question:str, class_name:str):
+        return await self.ai_service.class_question(question, class_name)

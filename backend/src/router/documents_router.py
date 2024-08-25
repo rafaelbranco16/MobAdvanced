@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File
 from src.loaders.loader import loader
-from src.controller.document_loader_controller import DocumentLoaderController
+from src.controllers.document_loader_controller import DocumentLoaderController
 
 document_router = APIRouter()
 

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from src.loaders.loader import loader
-from src.controller.AIController import AIController
+from src.controllers.ai_controller import AIController
 
 router = APIRouter()
 
@@ -15,3 +15,7 @@ class Router:
         ai_controller:AIController = loader.resolve("AIController")
         return ai_controller.insert_document_content()
     
+    @router.get("/class/question")
+    async def class_question(question, class_name):
+        ai_controller:AIController = loader.resolve("AIController")
+        return await ai_controller.class_question(question, class_name)

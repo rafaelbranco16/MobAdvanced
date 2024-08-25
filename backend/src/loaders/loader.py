@@ -1,12 +1,27 @@
 from src.loaders.container import Container
-from src.controller.AIController import AIController
-from src.controller.document_loader_controller import DocumentLoaderController
-from src.services.AIService import AIService
-from src.services.document_loader_service import DocumentLoaderService
+from src.loaders import index
+import importlib
 
 loader = Container()
 
-loader.register("AIService", AIService())
-loader.register("AIController", AIController())
-loader.register("DocumentLoaderService", DocumentLoaderService())
-loader.register("DocumentLoaderController", DocumentLoaderController())
+print('### Loading the Repos')
+for adapter in index.adapters:
+    loader.register(
+        adapter["name"],
+        adapter["path"]
+    )   
+print('### Loading the Services')
+for service in index.services:
+    loader.register(
+        service["name"],
+        service["path"]
+    )
+
+print("### Loading the Controllers")
+for controller in index.controllers:
+    loader.register(
+        controller["name"],
+        controller["path"]
+    )
+
+

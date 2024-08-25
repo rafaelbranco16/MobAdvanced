@@ -1,5 +1,5 @@
 from langchain_chroma import Chroma
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
 class RAG:
