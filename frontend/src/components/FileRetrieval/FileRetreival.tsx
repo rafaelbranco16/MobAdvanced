@@ -15,15 +15,15 @@ function FileRetreival() {
     const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
     const [itemToRemove, setItemToRemove] = useState<string | null>(null);
     const service:DocumentService = new DocumentService()
-
+    type ActionCallback = (item: string) => Promise<any>;
     const handleRemove = (item: string) => {
         setItemToRemove(item);
         setIsDialogOpen(true);
       };
     
-      const handleConfirm = async () => {
+      const handleConfirm = async (actionCallback:ActionCallback) => {
         if (itemToRemove) {
-          await service.removeDocument(itemToRemove)
+          await actionCallback(itemToRemove)
         }
         setItemToRemove(null);
         setIsDialogOpen(false);
@@ -97,9 +97,20 @@ function FileRetreival() {
                             >Remove</button>
                             <ConfirmationDialog
                                 isOpen={isDialogOpen}
-                                onConfirm={handleConfirm}
+                                onConfirm={() => handleConfirm(service.removeDocument)}
                                 onCancel={handleCancel}
                                 message={`Are you sure you want to remove ${itemToRemove}?`}
+                            />
+
+                            <button 
+                                className="file-retrieval-actions-add"
+                                onClick={() => handleRemove(item.file_name)}    
+                            >Add</button>
+                            <ConfirmationDialog
+                                isOpen={isDialogOpen}
+                                onConfirm={() => handleConfirm(service.addDocument)}
+                                onCancel={handleCancel}
+                                message={`Are you sure you want to add ${itemToRemove}?`}
                             />
                         </div>
                     </li>

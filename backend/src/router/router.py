@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from src.loaders.loader import loader
 from src.controllers.ai_controller import AIController
+from src import config
 
 router = APIRouter()
 
@@ -19,3 +20,8 @@ class Router:
     async def class_question(question, class_name):
         ai_controller:AIController = loader.resolve("AIController")
         return await ai_controller.class_question(question, class_name)
+    
+    @router.get("/document/add")
+    async def add_document_to_RAG(file_name):
+        ai_controller:AIController = loader.resolve(config.ai_controller["name"])
+        return await ai_controller.add_document_to_RAG(file_name)

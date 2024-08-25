@@ -1,6 +1,5 @@
 from src.loaders.container import Container
 from src.loaders import index
-import importlib
 
 loader = Container()
 

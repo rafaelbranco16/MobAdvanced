@@ -52,11 +52,11 @@ body, html {
     transition: 0.2s;
 }
 
-.file-retrieval-actions-accept {
+.file-retrieval-actions-add {
     background-color: greenyellow;
     border: 2px solid greenyellow;
 }
-.file-retrieval-actions-accept:hover {
+.file-retrieval-actions-add:hover {
     background-color: rgb(117, 195, 1);
     border: 2px solid rgb(117, 195, 1);
     transition: 0.2s;

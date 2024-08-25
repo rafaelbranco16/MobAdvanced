@@ -15,4 +15,10 @@ class RAG:
     '''
     def insert_documents(self, document: Document):
         self.vector_db.add_documents([document])
+
+    '''
+    Get information from the RAG
+    '''
+    def get_information(self, question:str):
+        return self.vector_db.similarity_search(question)
     

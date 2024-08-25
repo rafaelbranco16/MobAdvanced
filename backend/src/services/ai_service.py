@@ -2,7 +2,8 @@ from src.rag.RAG import RAG
 from langchain_community.document_loaders import DirectoryLoader
 from src.loaders import loader
 from src.adapters.llm_adapter import LLMAdapter
-from src import config
+from langchain_core.documents import Document
+
 
 
 class AIService:
@@ -29,5 +30,19 @@ class AIService:
     @param class_name - which class is the question about
     '''
     async def class_question(self, question:str, class_name:str):
+        from_rag:str = self.rag.get_information(question)
         question:str = question + "\nThis question is about the class " + class_name
         return await self.llm_adapter.send_prompt(question)
+    
+    '''
+    Adds a document to the RAG
+    '''
+    async def add_document_to_RAG(self, file_name:str):
+        try:
+            loader:DirectoryLoader = DirectoryLoader("files/AI_feed_documents/" + file_name)
+            print(loader.load())
+            self.rag.insert_documents(loader)
+            return {"message":f"The file {file_name} was loaded successfully."}
+        except:
+            return {"message":"Something went wrong."}
+ 

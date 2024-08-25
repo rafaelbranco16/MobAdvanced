@@ -54,4 +54,23 @@ export default class DocumentService {
             return error.message;
         }    
     }
+
+    /**
+     * Adds a document to the RAG
+     * @param fileName the file name to be added to the RAG on the API
+     * @returns if it was added or not
+     */
+    public async addDocument(fileName:string) {
+        const url = url_config.backend_base_url + endpoints.add_document + fileName
+
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+            });
+            return response.json();
+        } catch (error:any) {
+            console.error('Error:', error);
+            return error.message;
+        }  
+    }
 }
