@@ -4,5 +4,5 @@ export const endpoints = {
     download_document: "download/",
     remove_document: "remove/",
     add_document:"document/add",
-    send_question:"class/"
+    send_question:"class/question"
 }

@@ -1,0 +1,9 @@
+[
+    {
+        "guardian": {
+            "damage_type": "magic",
+            "obs": "Builds mostly defense",
+            "donts":"Cannot build Physical Items"
+        }
+    }
+]

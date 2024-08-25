@@ -23,7 +23,8 @@ function FileRetreival() {
     
       const handleConfirm = async (actionCallback:ActionCallback) => {
         if (itemToRemove) {
-          await actionCallback(itemToRemove)
+          const response = await actionCallback(itemToRemove)
+          console.log(response)
         }
         setItemToRemove(null);
         setIsDialogOpen(false);

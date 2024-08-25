@@ -18,5 +18,9 @@ class AIController:
     async def class_question(self, question:str, class_name:str):
         return await self.ai_service.class_question(question, class_name)
     
+    '''
+    Add a new document to the RAG
+    
+    '''
     async def add_document_to_RAG(self, file_name):
         return await self.ai_service.add_document_to_RAG(file_name)

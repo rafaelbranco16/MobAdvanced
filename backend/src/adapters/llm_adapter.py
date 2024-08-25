@@ -11,5 +11,5 @@ class LLMAdapter:
     '''
     Temporary function to test the different adapters
     '''
-    async def send_prompt(self, prompt:str):
+    async def send_prompt(self, prompt:str, from_rag:str):
         raise NotImplementedError("This feature has not been implemented yet!")

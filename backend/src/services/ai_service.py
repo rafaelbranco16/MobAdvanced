@@ -3,6 +3,10 @@ from langchain_community.document_loaders import DirectoryLoader
 from src.loaders import loader
 from src.adapters.llm_adapter import LLMAdapter
 from langchain_core.documents import Document
+import os
+from langchain_community.document_loaders import JSONLoader
+from pathlib import Path
+from pprint import pprint
 
 
 
@@ -21,7 +25,8 @@ class AIService:
     Insert a file into the AI RAG
     '''
     def insert_document_content(self, file_name):
-        loader:DirectoryLoader = DirectoryLoader("files/AI_feed_documents/" + file_name)
+        print(os.getcwd())
+        loader:JSONLoader = JSONLoader(os.getcwd() + "files/AI_feed_documents/" + file_name)
         docs = loader.load()
 
     '''
@@ -31,18 +36,21 @@ class AIService:
     '''
     async def class_question(self, question:str, class_name:str):
         from_rag:str = self.rag.get_information(question)
+        print(from_rag)
         question:str = question + "\nThis question is about the class " + class_name
-        return await self.llm_adapter.send_prompt(question)
+        return {"message": await self.llm_adapter.send_prompt(question, from_rag) }
     
     '''
     Adds a document to the RAG
     '''
     async def add_document_to_RAG(self, file_name:str):
         try:
-            loader:DirectoryLoader = DirectoryLoader("files/AI_feed_documents/" + file_name)
-            print(loader.load())
-            self.rag.insert_documents(loader)
+            path:str = os.getcwd() + "\\files\\AI_feed_documents\\" + file_name
+            loader:JSONLoader = JSONLoader(path, jq_schema='.', text_content=False)
+            docs = loader.load()
+            self.rag.insert_documents(docs)
+        
             return {"message":f"The file {file_name} was loaded successfully."}
-        except:
-            return {"message":"Something went wrong."}
+        except Exception as e:
+            return {"message":"Something went wrong." + str(e)}
  

@@ -61,7 +61,7 @@ export default class DocumentService {
      * @returns if it was added or not
      */
     public async addDocument(fileName:string) {
-        const url = url_config.backend_base_url + endpoints.add_document + fileName
+        const url = url_config.backend_base_url + endpoints.add_document + '?file_name=' + fileName
 
         try {
             const response = await fetch(url, {

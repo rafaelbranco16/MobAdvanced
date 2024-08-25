@@ -1,13 +1,15 @@
 import './Guardians.css'
 import '../../shared_css/shared_css.css'
 import React, { useState } from 'react';
+import {send_question} from '../../services/question_service'
 
 function Guardians() {
     const [text, setText] = useState("");
     
-    const handleKeyPress = (event:React.KeyboardEvent) => {
+    const handleKeyPress = async (event:React.KeyboardEvent) => {
         if(event.key == 'Enter') {
-            
+            const answer = await send_question(text, 'Guardian')
+            window.alert(answer["message"]["content"])
         }
     }
 
