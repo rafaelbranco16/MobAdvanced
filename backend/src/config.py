@@ -1,6 +1,8 @@
 from dotenv import load_dotenv
 import os
+from langfuse.callback import CallbackHandler
 
+load_dotenv()
 config = {
     "ai_feed_files_location":"files/AI_feed_documents",
     "react_app_url":"http://localhost:5173/"
@@ -34,3 +36,10 @@ llm_adapter = {
     "name":"GroqAdapter",
     "path":"src.adapters.groq_adapter"
 }
+
+# Langfuse Configuration
+langfuse = CallbackHandler(
+  secret_key=os.getenv("LANGFUSE_SK_KEY"),
+  public_key=os.getenv("LANGFUSE_PK_KEY"),
+  host="https://cloud.langfuse.com"
+)

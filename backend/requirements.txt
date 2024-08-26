@@ -11,3 +11,5 @@ langchain_openai
 langchain_groq
 sentence_transformers
 unstructured
+langfuse
+jq

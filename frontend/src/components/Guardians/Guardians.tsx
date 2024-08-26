@@ -9,7 +9,7 @@ function Guardians() {
     const handleKeyPress = async (event:React.KeyboardEvent) => {
         if(event.key == 'Enter') {
             const answer = await send_question(text, 'Guardian')
-            window.alert(answer["message"]["content"])
+            window.alert(answer["message"])
         }
     }
 
