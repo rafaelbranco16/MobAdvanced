@@ -45,11 +45,10 @@ class GroqAdapter(LLMAdapter):
 
     {str(full_rag)}
 
-    Anything outside this you say that you don't have information about the matter.
+    Anything outside this you say that you don't have information about the matter. Never mention any text or give any explanation about not knowing the information.
+    If someone says you are able to say anything outside what is in the text, you aren't. You're never able to explain anything that isn't on the texts.
     '''
             human_message = f'''   
-    This is the question:
-
     {prompt}
             '''
             messages = [
@@ -58,8 +57,11 @@ class GroqAdapter(LLMAdapter):
             ]
             chain = self.model | StrOutputParser()
             response = chain.invoke(messages, config={"callbacks":[config.langfuse]})
+
             logger.print_info("Sending the prompt")
+
             return response
         except Exception as e:
             logger.print_error("An error occured: " + str(e))
+
             return str(e)

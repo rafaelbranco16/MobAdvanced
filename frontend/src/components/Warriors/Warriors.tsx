@@ -1,7 +1,22 @@
 import './Warriors.css'
 import '../../shared_css/shared_css.css'
+import React, { useState } from 'react';
+import {send_question} from '../../services/question_service'
+
 
 function Warriors() {
+    const [text, setText] = useState("");
+    
+    const handleKeyPress = async (event:React.KeyboardEvent) => {
+        if(event.key == 'Enter') {
+            const answer = await send_question(text, 'Warrior')
+            window.alert(answer["message"])
+        }
+    }
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setText(event.target.value);
+    };
     return (
         <div className="warriors-page">
             <img src="Belona.png" alt="Banner" className="banner-image" />
@@ -10,6 +25,8 @@ function Warriors() {
                 <input 
                     type='text' 
                     placeholder='Type your question here...'
+                    onKeyDown={handleKeyPress}
+                    onChange={handleChange}
                 />
             </div>
             <div className="class-explanation-div">

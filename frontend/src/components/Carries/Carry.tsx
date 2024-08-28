@@ -1,7 +1,21 @@
 import './Carry.css'
 import '../../shared_css/shared_css.css'
+import React, { useState } from 'react';
+import {send_question} from '../../services/question_service'
 
 function Carry() {
+    const [text, setText] = useState("");
+    
+    const handleKeyPress = async (event:React.KeyboardEvent) => {
+        if(event.key == 'Enter') {
+            const answer = await send_question(text, 'Carry')
+            window.alert(answer["message"])
+        }
+    }
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setText(event.target.value);
+    };
     return (
         <div className="carry-page">
             <img src="Anhur.png" alt="Banner" className="banner-image" />
@@ -10,6 +24,8 @@ function Carry() {
                 <input 
                     type='text' 
                     placeholder='Type your question here...'
+                    onKeyDown={handleKeyPress}
+                    onChange={handleChange}
                 />
             </div>
             <div className="class-explanation-div">

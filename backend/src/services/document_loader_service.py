@@ -5,9 +5,21 @@ import shutil
 import os
 import pathlib
 
+'''
+This class is mostly used in order to work with the filesystem
+
+There are some questions:
+
+Is this safe?
+Is there any other way to do so?
+Can the files be executed by anyone?
+Is there a way to save in a protected folder by the OS?
+'''
 class DocumentLoaderService:
     '''
     Saves the file into the filesystem
+
+    @param file the file to be saved
     '''
     async def save_valid_file(self, file: UploadFile = File(...)):
         file_dir = config["ai_feed_files_location"]
@@ -37,6 +49,8 @@ class DocumentLoaderService:
         return files_list
     '''
     Returns a file from this server
+
+    @param file_name - the name of the file to be returned
     '''
     async def download_file(self, file_name:str):
         file_dir = config["ai_feed_files_location"]
@@ -53,6 +67,11 @@ class DocumentLoaderService:
         }.get(os.path.splitext(file_name)[1], "application/octet-stream")
         return FileResponse(file_path, media_type=mime_type, filename=file_name)
     
+    '''
+    Removes a file from the fs
+
+    @param file_system - the file to be removed
+    '''
     async def remove_file(self, file_name:str):
         file_dir = config["ai_feed_files_location"]
         file_path = os.path.join(file_dir, file_name)
