@@ -1,22 +1,23 @@
 from src.loaders.container import Container
 from src.loaders import index
+from src.logger import Logger
 
 loader = Container()
 
-print('### Loading the Repos')
+Logger.print_info('Loading the Repositories/Adapters')
 for adapter in index.adapters:
     loader.register(
         adapter["name"],
         adapter["path"]
     )   
-print('### Loading the Services')
+Logger.print_info('Loading the Services')
 for service in index.services:
     loader.register(
         service["name"],
         service["path"]
     )
 
-print("### Loading the Controllers")
+Logger.print_info("Loading the Controllers")
 for controller in index.controllers:
     loader.register(
         controller["name"],

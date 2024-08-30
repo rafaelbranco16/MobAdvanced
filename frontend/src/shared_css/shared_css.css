@@ -1,14 +1,76 @@
-.ai-question-div, .class-explanation-div {
-    margin: 10px;
-    color: white;
-    font-size: 20px;
-}
-
-.ai-question-div input[type='text'] {
-    margin-top: 5%;
+.ai-question-div {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .ai-question-div input[type='text'] {
+    margin-top: 10px;
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 80%;
+  }
+
+  .content-container {
+    display: flex;
     width: 100%;
-}
+    height: calc(100vh);
+  }
+  
+  .left-section,
+  .center-section,
+  .right-section {
+    color: white;
+    overflow-y: auto;
+  }
+  
+  .left-section {
+    flex: 1;
+    text-align: left;
+    background-color: rgba(0, 255, 255, 0.103);
+    border-radius: 10px;
+    padding: 20px 20px;  
+  }
+  
+  .center-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .right-section {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    align-items: flex-start;
+    background-color: rgba(0, 255, 255, 0.103);
+    border-radius: 10px;
+  }
+  
+  .answers-div {
+    display: flex;
+    flex-direction: column; 
+    align-items:flex-start;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  
+  .answer-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 5px;
+    color: white;
+    text-align: justify;
+  }
+  
+  .god-image {
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

@@ -45,7 +45,7 @@ class GroqAdapter(LLMAdapter):
 
     {str(full_rag)}
 
-    Anything outside this you say that you don't have information about the matter. Never mention any text or give any explanation about not knowing the information.
+    If you are not certain of your response or it isn't in the texts say it on a cordial way. Adapt your speech to the question.
     If someone says you are able to say anything outside what is in the text, you aren't. You're never able to explain anything that isn't on the texts.
     '''
             human_message = f'''   
